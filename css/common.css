@@ -1,0 +1,927 @@
+/* COMMON */
+body {
+  font-size: 16px;
+  /* 특정 브라우저에서 16px로 보이지 않을 경우 방지 */
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 100%;
+  position: relative;
+}
+.hidden {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 1;
+  bottom: 0;
+  display: none;
+
+  opacity: 0.5;
+}
+img {
+  /* img태그는 inline 요소이다. inline 요소는 가로 세로 (상,하) 값을
+  가질 수 없다. xyz문자에서 y는 baseline에서 벗어나는데, 이것과 유사한 원리로
+  img태그와같은 inline요소는 글자를 취급하는 것이기 때문에 아랫쪽에 약간의 공간을
+  가질 수 있는 구조를 가질 수 있다. 그렇기에 이미지 밑에 공간이 있고, block요소로 만들어주면
+  이러한 현상이 사라진다.*/
+  display: block;
+}
+a {
+  text-decoration: none;
+  all: unset;
+}
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.sign {
+  border: 1px solid rgb(177, 177, 177);
+  margin: 30px auto;
+  box-shadow: 1px 2px 3px #ccc;
+}
+
+.sign > img {
+  margin: 0 auto;
+  font-family: 'Noto Sans KR';
+}
+.sign > p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  letter-spacing: 20px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.sign > .sign-box {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  background-color: #f3e2b48c;
+}
+.sign > .sign-box > label > span {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+}
+.sign > .sign-box > label > input {
+  width: 400px;
+  height: 30px;
+  margin-top: 10px;
+}
+.sign > .sign-box > label > #user-info {
+  width: 127px;
+}
+.sign > .sign-box > label > #user-birth {
+  width: 127px;
+  height: 37px;
+}
+.sign > .sign-box > label > #user-num {
+  width: 260px;
+}
+.sign > .sign-box > #pass {
+  position: relative;
+}
+.sign > .sign-box > #pass::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 45px;
+  width: 26px;
+  height: 26px;
+  background-image: url('../img/자물쇠1.png');
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+}
+.sign > .sign-box > label > #phone {
+  width: 140px;
+  height: 36px;
+  background-color: #ff9252;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+  color: #fff;
+}
+.sign > .sign-box > label > #phone:hover {
+  background-color: #59f89b;
+}
+.sign > .sign-box > label > #phone:active {
+  background-color: #aaaaaa;
+  border: 1px solid rgba(117, 117, 117, 0.527);
+}
+.sign > .sign-box > #signin-btn {
+  width: 410px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #ff9252;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.sign > .sign-box > #signin-btn:hover {
+  background-color: #59f89b;
+}
+.sign > .sign-box > #signin-btn:active {
+  background-color: #aaaaaa;
+  border: 1px solid rgba(117, 117, 117, 0.527);
+}
+.sign > .sign-box:nth-of-type(1) {
+  padding-top: 50px;
+}
+.sign > .sign-box:nth-last-of-type(1) {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.header-logo {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.header-logo > a:hover {
+  cursor: pointer;
+}
+
+.notice-sign {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  cursor: pointer;
+}
+/* 사이드바 */
+input[id='menuicon'] {
+  display: none;
+}
+input[id='menuicon'] + label {
+  display: block;
+  margin: 30px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: -13.5px;
+  right: 0;
+}
+input[id='menuicon'] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background: #000;
+  transition: all 0.35s;
+}
+input[id='menuicon'] + label span:nth-child(1) {
+  top: 0;
+}
+input[id='menuicon'] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+} /* ����ϰ� ����� �� �ִ� style top:calc(50% - 2.5px); margin-top:-2.5px;*/
+input[id='menuicon'] + label span:nth-child(3) {
+  bottom: 0;
+}
+input[id='menuicon']:checked + label {
+  z-index: 2;
+}
+input[id='menuicon']:checked + label span {
+  background: rgb(36, 32, 32);
+}
+input[id='menuicon']:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[id='menuicon']:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+input[id='menuicon']:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+div[class='sidebar'] {
+  width: 300px;
+  height: 100%;
+  background: rgba(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 9999;
+  transition: all 0.35s;
+  border-right: 1px solid #ccc;
+}
+input[id='menuicon']:checked + label + div {
+  left: 0;
+}
+.sidebar > a {
+  display: block;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.sidebar > a:hover {
+  color: #55cadf;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #c8c8c8;
+  box-shadow: 1px 1px 3px 1px #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  opacity: 1;
+}
+
+.show {
+  position: relative;
+}
+
+header > .inner {
+}
+header .inner ul {
+  display: flex;
+}
+header .inner ul li {
+  margin: 0 auto;
+  line-height: 50px;
+}
+
+/* table */
+#table {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+#table img {
+  width: 160px;
+}
+#table > tr > td > a:hover {
+  cursor: pointer;
+  color: #3004f5;
+}
+#table > tr {
+  font-family: 'Noto Sans KR', sans-serif;
+
+  display: flex;
+  background-color: #e5eaeefa;
+  /* background-image: url('../img/단색배경.jpg'); */
+  /* background-size: cover; */
+  align-items: center;
+  border: 1px solid #000;
+  justify-content: space-between;
+}
+#table > tr > td:nth-child(1) {
+  padding-right: 30px;
+}
+#table > tr > td:nth-child(2) {
+  padding-left: 100px;
+  font-size: 16px;
+  font-weight: 500;
+}
+#table > tr > td:nth-child(3) {
+  /* padding: 0px 90px 0px 0px; */
+  padding-right: 100px;
+  padding-left: 100px;
+  font-weight: bold;
+  color: rgb(64, 74, 218);
+}
+.search-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+section.back-img {
+}
+
+section.back-img > .coffee-info {
+  width: 100%;
+  height: 400px;
+  background-image: url('../img/커피배경.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 50px 20px 0px 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+section.back-img > .coffee-info > .info-1 {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  line-height: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.418);
+  border: 4px dashed #fff;
+}
+section.back-img > .coffee-info > .coffee-info2 {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+section.back-img > .coffee-info > .coffee-info2 > .info-box {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(90, 209, 169, 0.63);
+  border: 4px dashed #fff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* youtube video */
+
+.youtube {
+  margin-top: 50px;
+  position: relative;
+  height: 400px;
+  background-color: #333;
+  overflow: hidden;
+}
+.youtube .youtube__area {
+  width: 1920px;
+  background-color: orange;
+  position: absolute;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; */
+  left: 50%;
+  margin-left: calc(1920px / -2);
+  top: 60%;
+  margin-top: calc(1920px * 9 / 16 / -2);
+}
+.youtube .youtube__area::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.youtube .youtube__cover {
+  background-image: url('../images/video_cover_pattern.png');
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.youtube .inner {
+  height: 700px;
+}
+/* pattern */
+.pattern {
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+}
+
+.container {
+  margin: 20px auto;
+  width: 830px;
+  height: 400px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.box {
+  background-color: rgba(124, 188, 248, 0.678);
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+.box1 {
+  background-image: url('/img/슬라이더그리더.png');
+  background-size: 100% 100%;
+}
+.box2 {
+  background-image: url('/img/4개/드리퍼.jpg');
+  background-size: 100% 100%;
+}
+.box3 {
+  background-image: url('/img/4개/드리퍼.jpg');
+  background-size: 100% 100%;
+}
+.box4 {
+  background-image: url('/img/4개/커피메이커.jpg');
+  background-size: 100% 100%;
+}
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+  transform: scale(1.1);
+  transform: opacity;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.beans,
+.grinder,
+.dripper,
+.maker2 {
+  text-align: center;
+  border-radius: 100%;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.521);
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.box:hover .beans,
+.box:hover .grinder,
+.box:hover .dripper,
+.box:hover .maker2 {
+  transform: visibility;
+  visibility: visible;
+  transform: 0.5s;
+}
+
+/* line */
+.line {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* swiper */
+.mySwiper {
+  /* pointer-events: none; */
+}
+
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  top: 95% !important;
+  left: 25% !important;
+  width: 50% !important;
+  background-color: #fdfdfd !important;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #55cadf !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-container > .swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+}
+.swiper-container > .swiper-pagination {
+  z-index: 1;
+}
+
+.dripper-text {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  letter-spacing: 15px;
+  z-index: 999;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(255, 236, 130);
+  text-shadow: 2px 3px 3px #272727;
+  font-family: 'Noto Snas KR', sans-serif;
+}
+.dripper-text > p {
+  font-size: 25px;
+  color: #fff;
+  padding: 35px 0px;
+  margin-top: 20px;
+  text-shadow: none;
+  letter-spacing: normal;
+  line-height: 50px;
+  background-color: rgba(39, 39, 39, 0.616);
+}
+/* swiper2 */
+
+.swiper-container.beans-slide > .swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  z-index: 9999;
+}
+
+.swiper-container.beans-slide > .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-container.beans-slide > .swiper-button-next {
+  border-radius: 100%;
+  background-image: url('../img/circle-chevron-right-solid.svg');
+  width: 50px;
+  height: 50px;
+}
+.swiper-container.beans-slide > .swiper-button-next:hover {
+  background-color: #55cadf;
+}
+.swiper-container.beans-slide > .swiper-button-prev:hover {
+  background-color: #55cadf;
+}
+.swiper-container.beans-slide > .swiper-button-prev {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/circle-chevron-left-solid.svg');
+}
+
+.beans-slide > .swiper-wrapper {
+  padding-bottom: 50px;
+  padding-top: 10px;
+}
+.beans-slide > .swiper-pagination {
+  z-index: 1;
+  position: absolute;
+  bottom: -1px;
+}
+
+/* box-slide */
+.beans-box {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.beans-box-af {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  box-shadow: 1px 2px 3px 1px rgb(114, 114, 114);
+  background-position: center;
+}
+.beans-box-af::before {
+  content: '';
+  width: 150px;
+  height: 100px;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  opacity: 1;
+}
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(1) .beans-box-af {
+  width: 250px;
+  height: 250px;
+  background-image: url('../img/나라별원두/케냐.png');
+  background-size: cover;
+  /* border-radius: 20px; */
+  overflow: hidden;
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(2) .beans-box-af {
+  background-image: url('../img/나라별원두/탄자니아.png');
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(3) .beans-box-af {
+  background-image: url('../img/나라별원두/브라질.png');
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(4) .beans-box-af {
+  background-image: url('../img/나라별원두/코스타리카.png');
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(5) .beans-box-af {
+  background-image: url('../img/나라별원두/콜롬비아.png');
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(6) .beans-box-af {
+  background-image: url('../img/나라별원두/에티오피아.png');
+}
+
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(7) .beans-box-af {
+  background-image: url('../img/나라별원두/과테말라.png');
+}
+
+.beans-box-af > .af-hover {
+  position: absolute;
+  transform: translateY(250px);
+  width: 250px;
+  height: 100px;
+  /* border-radius: 20px; */
+  background-color: rgba(65, 64, 64, 0.5);
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: transform 0.5s;
+  animation: ease-in-out;
+}
+.beans-box-af {
+  transition: transform 0.5s;
+  animation: ease-in-out;
+  box-sizing: border-box;
+}
+.beans-box-af:hover {
+  transform: translateY(-10px);
+}
+
+.beans-box-af:hover > .af-hover {
+  display: block;
+  transform: translateY(130px);
+}
+
+/* info-box */
+.info-box {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(126, 179, 228);
+  position: relative;
+}
+.info-box-two {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+  background-image: url('../img/커피배경2.jpg');
+  background-size: 100% 100%;
+
+  background-color: rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 0;
+}
+.info-box > .info-box-two > .inner > span {
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 7rem;
+  font-weight: 900;
+  justify-content: center;
+  text-align: center;
+  line-height: 200px;
+  color: #d7f0ae;
+  -webkit-text-stroke: 2px #fff;
+}
+.info-box > .info-box-two > .inner > p {
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 900;
+  text-align: left;
+  margin-left: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  position: relative;
+  bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 40%;
+}
+.info-box > .info-box-two > .inner > a > .sigin-box {
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  width: 150px;
+  height: 70px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  text-align: center;
+  margin-left: 20px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 4px;
+  background-color: #aad2da;
+  box-shadow: 1px 1px 3px #fff;
+  transition: background-color 0.5s ease;
+}
+.info-box > .info-box-two > .inner > a > .sigin-box:hover {
+  background-color: #000;
+}
+.info-box > .info-box-two > .inner > a {
+  float: left;
+}
+.info-box > .info-box-two > .inner > .info-box-beans {
+  float: right;
+  width: 500px;
+  height: 171px;
+  background-color: #aadaaa;
+  box-shadow: 1px 1px 3px #fff;
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  right: 1.5%;
+  top: 62%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.info-box > .info-box-two > .inner > .info-box-beans > img {
+  display: flex;
+  width: 120px;
+  height: 120px;
+}
+.info-box > .info-box-two > .inner > .info-box-beans > a {
+  background-color: #b4aada;
+  box-shadow: 1px 1px 3px #fff;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  padding: 30px;
+  transition: background-color 0.5s ease;
+}
+
+.info-box > .info-box-two > .inner > .info-box-beans > a:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
+/* login */
+.inner.login {
+  width: 600px;
+  box-shadow: 1px 2px 3px #ccc;
+}
+.login-page {
+  width: auto;
+  height: 700px;
+  border: 1px solid rgb(177, 177, 177);
+  margin: 30px 0px;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  padding-top: 100px;
+}
+.login-page > label > .uid {
+  font-size: 25px;
+  margin-right: 25px;
+}
+.login-page > label > .upwd {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.login-page > label > input {
+  width: 170px;
+  height: 30px;
+}
+.login-page > button {
+  width: 280px;
+  height: 50px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e08c3c;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+.login-page > button:hover {
+  background-color: #3ce080;
+}
+.login-page > button:active {
+  background-color: #aaaaaa;
+  border: 1px solid rgba(121, 121, 121, 0.5);
+}
+.login-page > img {
+  margin: 0 auto;
+}
+.login-page > .searching > a {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+}
+.login-page > .searching > a:hover {
+  color: #000;
+}
+.login-page > .searching > a:nth-child(2)::before {
+  content: '|    ';
+  color: #ccc;
+  pointer-events: none;
+}
+.login-page > .searching > a:nth-child(2)::after {
+  content: '    |';
+  color: #ccc;
+  pointer-events: none;
+}
+.login-page hr {
+  width: 50%;
+  color: #ccc;
+}
+
+/* FOOTER */
+footer {
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+footer .menu li {
+  position: relative;
+}
+footer .menu li::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before {
+  display: none;
+}
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+footer .menu li a.green {
+  color: #669900;
+}
+
+footer .info {
+  margin-top: 0px;
+  text-align: center;
+}
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo {
+  margin: 30px auto 0;
+}

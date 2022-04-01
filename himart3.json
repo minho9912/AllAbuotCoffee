@@ -1,0 +1,32 @@
+[
+  {
+    "img": "http://static2.e-himart.co.kr/contents/goods/00/15/50/58/68/0015505868__MW69269_696245__M_220_220.jpg",
+    "alt": "\ub3d4\ud615 \ubd84\uc1c4\uae30 \uc6d0\ub450\ucee4\ud53c\uac00\ub294\uae30\uacc4 \uc218\ub3d9 \uadf8\ub77c\uc778\ub354 \uc6d0\ubaa9 \uac00\uc815\uc6a9 \ucea0\ud551 \ud578\ub4dc\ub4dc\ub9bd",
+    "link": "/app/goods/goodsDetail?goodsNo=0015505868",
+    "price": "52900\uc6d0"
+  },
+  {
+    "img": "http://static1.e-himart.co.kr/contents/goods/00/14/22/46/04/0014224604__MW56389_1807520__M_220_220.jpg",
+    "alt": "\ub808\ud2b8\ub85c \uc6d0\ub450\uad75\uae30\uc870\uc808 \ud578\ub4dc\ubc00 \uadf8\ub77c\uc778\ub354 LSCG-01(\ubcf4\uad00\uacb8\uc6a9)",
+    "link": "/app/goods/goodsDetail?goodsNo=0014224604",
+    "price": "45000\uc6d0"
+  },
+  {
+    "img": "http://static2.e-himart.co.kr/contents/goods/00/15/51/32/76/0015513276__MW55714_1219520__M_220_220.jpg",
+    "alt": "\ubbf8\ub77c\uc2a4 \uc6d0\ub450 \ubd84\uc1c4\uae30 \uba38\uc2e0 \ucee4\ud53c \uadf8\ub77c\uc778\ub354 SN-E100MG",
+    "link": "/app/goods/goodsDetail?goodsNo=0015513276",
+    "price": "34900\uc6d0"
+  },
+  {
+    "img": "http://static1.e-himart.co.kr/contents/goods/00/16/63/84/92/0016638492__LCZ4004NY__M_220_220.jpg",
+    "alt": "\uc624\ub9ac\uc9c0\ub110 \uba40\ud2f0 \ube14\ub80c\ub354 \ub124\uc774\ube44 \uc2a4\ubb34\ub514 \ubbf9\uc11c\uae30",
+    "link": "/app/goods/goodsDetail?goodsNo=0016638492",
+    "price": "59900\uc6d0"
+  },
+  {
+    "img": "http://static2.e-himart.co.kr/contents/goods/00/16/63/84/76/0016638476__LCZ4004WT__M_220_220.jpg",
+    "alt": "\uc624\ub9ac\uc9c0\ub110 \uba40\ud2f0 \ube14\ub80c\ub354 \ud654\uc774\ud2b8 \uc2a4\ubb34\ub514 \ubbf9\uc11c\uae30",
+    "link": "/app/goods/goodsDetail?goodsNo=0016638476",
+    "price": "59900\uc6d0"
+  }
+]
