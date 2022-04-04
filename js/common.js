@@ -19,7 +19,7 @@ var swiper = new Swiper('.mySwiper', {
 
 var swiper2 = new Swiper('.beans-slide', {
   slidesPerView: 3, //한번에 보여줄 슬라이드 개수
-  spaceBetween: -50,
+  spaceBetween: -100,
   pagination: {
     el: '.beans-slide > .swiper-pagination',
     clickable: true,
@@ -59,9 +59,7 @@ function floatingObject(selector, delay, size) {
     delay: random(0, delay),
   });
 }
-floatingObject('.cof1', 1, 15);
-// floatingObject('#cof1', 1, 15);
-floatingObject('.cof2', 1, 15);
+floatingObject('.beans-box-af', 1, 15);
 
 var ctrl = new ScrollMagic.Controller();
 
@@ -88,3 +86,25 @@ sidebar.addEventListener('click', function () {
     swiper_btn.style.pointerEvents = 'visible';
   }
 });
+
+kenya = () => {
+  location.href = '../beans-info/beans-info.html?beans=kenya';
+};
+tan = () => {
+  location.href = '../beans-info/beans-info.html?beans=tanzania';
+};
+san = () => {
+  location.href = '../beans-info/beans-info.html?beans=brazil';
+};
+cos = () => {
+  location.href = '../beans-info/beans-info.html?beans=costarica';
+};
+col = () => {
+  location.href = '../beans-info/beans-info.html?beans=columbia';
+};
+yega = () => {
+  location.href = '../beans-info/beans-info.html?beans=ethiopia';
+};
+mala = () => {
+  location.href = '../beans-info/beans-info.html?beans=guatemala';
+};
