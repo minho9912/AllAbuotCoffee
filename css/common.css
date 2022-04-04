@@ -742,7 +742,6 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 } */
 #eq-box > .eq-hover {
   position: absolute;
-  transform: translateY(0px);
   width: 300px;
   height: 50px;
   /* border-radius: 20px; */
