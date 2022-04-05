@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>공지사항</title>
+    <title>AllAboutCoffee</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,6 +39,8 @@
         <a href="../sign/login.html">로그인</a>
         <a href="../sign/sign.html">회원가입</a>
         <a href="../notice/list.html">공지사항</a>
+        <a href="../company/info.html">회사소개</a>
+
       </div>
       <div class="inner">
     
@@ -61,6 +63,15 @@
 
 
       <h1 class="search-box">하이마트 원두 검색결과</h1>
+      <div class="search-beans inner">
+        <a onclick="first()">케냐</a>
+        <a onclick="second()">탄자니아</a>
+        <a onclick="third()">산토스</a>
+        <a onclick="fourth()">수프리모</a>
+        <a onclick="fifth()">따라주</a>
+        <a onclick="sixth()">예가체프</a>
+        <a onclick="seventh()">안티구아</a>
+      </div>
 
       <tr>
         
@@ -96,8 +107,66 @@
           jsonfunc(this.responseText); 
         }
       }
-      xhttp.open("GET","../himart.json", true);
+
+      let beans_grp = "../himart.json";
+      let table_grp = document.querySelector("#table");
+
+
+      xhttp.open("GET",beans_grp, true);
       xhttp.send();
+
+      first = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../kenya.json", true);
+        xhttp.send();
+      }
+      second = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../tanzania.json", true);
+        xhttp.send();
+      }
+      third = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../brazil.json", true);
+        xhttp.send();
+      }
+      fourth = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../columbia.json", true);
+        xhttp.send();
+      }
+      fifth = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../costarica.json", true);
+        xhttp.send();
+      }
+      sixth = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../ethiopia.json", true);
+        xhttp.send();
+      }
+      seventh = () => {
+        while (table_grp.firstChild){
+          table_grp.removeChild(table_grp.lastChild)
+        }
+        xhttp.open("GET","../guatemala.json", true);
+        xhttp.send();
+      }
+
+
+
       
       function jsonfunc( jsonText ) {
         let arrTitle = new Array();
