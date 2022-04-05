@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AllAboutCoffee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script defer src="../js/notice.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"
+    integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="header-logo">
+
+      <a href="../index.html"> <img src="../img/logo1.png" alt="사진" width="200"></a>
+    
+      
+    </div>
+
+    <header class="header">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon" id="side" onclick="nxtprev()">
+	    <span span></span>
+	    <span></span>
+	    <span></span>
+      </label>
+      <div div class="sidebar">
+        <a href="../sign/login.html">로그인</a>
+        <a href="../sign/sign.html">회원가입</a>
+        <a href="../notice/list.html">공지사항</a>
+      </div>
+      <div class="inner">
+    
+        <ul>
+          <li><a href="../search/beans.html">BEANS</a></li>
+          <li><a href="../search/dripper.html">DRIPPER</a></li>
+          <li><a href="../search/grinder.html">GRINDER</a></li>
+          <li><a href="../search/maker.html">MAKER</a></li>
+        </ul>
+
+       
+        </ul>
+      </div>
+    </header>
+    
+    <div class="company-info">
+      회사소개
+    </div>
+
+    <div id="map" style="width:700px;height:400px;"></div>
+
+    <div class="inner company-street">
+      <div class="street-work">
+        <span>도보 이용시</span>
+      <img src="../img/회사소개3.png" alt="도보" width="200px">
+      </div>
+      <div class="street-work-info info-com">
+        안양역 2번 출구 → 주공뜨란채 아파트 방향(남쪽)으로 약 200m 직진<br>
+        → 태평로 134번길로 좌회전 횡단보도를 건너 약 350m 직진<br>
+        → 안일교를 건넌 후 오른쪽으로 약 50m 이동 (경수대로)<br>
+        →  횡단보도를 이용하여 대림대학교 방면으로 횡단
+      </div>
+    </div>
+    <div class="inner company-street">
+      <div class="street-work">
+        <span> 버스 이용시</span>
+      <img src="../img/회사소개2.png" alt="도보" width="150px">
+      </div>
+      <div class="street-work-info">
+        안양역 2번 출구 → 주공뜨란채 아파트 방향(남쪽)으로 약 200m 직진<br>
+        → 태평로 134번길로 좌회전 횡단보도를 건너 약 350m 직진<br>
+        → 안일교를 건넌 후 오른쪽으로 약 50m 이동 (경수대로)<br>
+        →  횡단보도를 이용하여 대림대학교 방면으로 횡단
+      </div>
+    </div>
+    <div class="inner company-street3">
+      <div class="street-work">
+        <br>
+        <span>자가 이용시</span>
+      <img src="../img/회사소개1.png" alt="도보" width="150px">
+      </div>
+      <div class="street-work-info">
+        경기도 안양시 동안구 임곡로 29
+      </div>
+    </div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9287b9973450a6e825755a3446a897cb"></script>
+    <script>
+     var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.40402, 126.93060), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+var positions = [
+    {
+        content: '<div style="text-align:center; padding-left:35px">대림대학교<br>전산관</div>', 
+        latlng: new kakao.maps.LatLng(37.40402, 126.93060)
+    },
+  
+];
+
+for (var i = 0; i < positions.length; i ++) {
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng // 마커의 위치
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다 
+    var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content // 인포윈도우에 표시할 내용
+    });
+
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+}
+
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+    </script>
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+          <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+        </ul>
+        <div class="info">
+          <span>사업자등록번호 000-00-00000</span>
+          <span>더블조 졸업작품</span>
+          <span>TEL : 010-5718-3020</span>
+          <span>웹:최민호 / 디자인:오승엽</span>
+        </div>
+        <p class="copyright">&copy;<span class="this-year"></span> All About Coffee. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
