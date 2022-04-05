@@ -701,6 +701,20 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   transform: translateY(130px);
 }
 
+/* search-beans */
+.search-beans {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.search-beans > a {
+  cursor: pointer;
+  margin: 0px 10px;
+  font-family: 'Noto Sans KR';
+  font-size: 17px;
+}
+.search-beans > a:hover {
+  color: #3004f5;
+}
 /* equipments */
 .eq-sec {
   width: 100%;
