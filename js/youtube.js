@@ -6,14 +6,14 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
   new YT.Player('player', {
-    videoId: 'wqlzeAPA0Co',
-    height: '400',
-    width: '1980',
+    videoId: 'NBIw_-c5su0',
+    height: '200',
+    width: '360',
     // watch?v=An6LvWQuj_8 < A~8까지가 ID
     playerVars: {
       autoplay: true, // 자동 재생 유무
       loop: true, // 반복 재생 유무
-      playlist: 'wqlzeAPA0Co',
+      playlist: 'NBIw_-c5su0',
     },
     events: {
       onReady: function (event) {

@@ -13,6 +13,7 @@
     <link  rel="stylesheet" href="./css/common.css" />
     <link rel="icon" href="./img/logo1.png" />
     
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js> </script> 
     
     <!-- require -->
 
@@ -20,10 +21,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="./js/common.js"></script>
-    <script defer src="./js/youtube.js"></script>
+    <script defer src="./js/top.js"></script>
     <!-- <script defer src="./daa.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
       <!-- gsap & ScrollToPlugin -->
       <script
@@ -38,6 +40,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- scrollMagic -->
+    
 
   </head>
   <body>
@@ -219,16 +224,16 @@
         
       </section>
       <div class="equipments">
-        <a href="javascript:void(0)" id="eq-box">
+        <a href="./equipments/dripper.html" id="eq-box">
         <img src="./img/장비들/dripper.png" alt="드리퍼" width="300px" height="250px">
         <div class="eq-hover">DRIPPER</div>
       </a>
-      <a href="javascript:void(0)" id="eq-box">
+      <a href="./equipments/grinder.html" id="eq-box">
         <img src="./img/장비들/grinder.png" alt="그라인더" width="300px" height="250px">
         <div class="eq-hover">GRINDER</div>
 
         </a>
-      <a href="javascript:void(0)" id="eq-box">
+      <a href="./equipments/maker.html" id="eq-box">
         <img src="./img/장비들/maker.png" alt="메이커" width="300px" height="250px">
         <div class="eq-hover">COFFEE MAKER</div>
 
@@ -279,6 +284,9 @@
     </footer>
     
   <div class="hidden"></div>
- 
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
 </body>
 </html>

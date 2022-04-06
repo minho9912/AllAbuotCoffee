@@ -42,7 +42,9 @@ function nxtprev() {
     prev.style.display = 'block';
   }
 }
+var _scrollTop = window.scrollY || document.documentElement.scrollTop;
 
+console.log(_scrollTop);
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 문자 데이터를,
@@ -60,6 +62,7 @@ function floatingObject(selector, delay, size) {
   });
 }
 floatingObject('.beans-box-af', 1, 15);
+floatingObject('.video-w', 1, 15);
 
 var ctrl = new ScrollMagic.Controller();
 
