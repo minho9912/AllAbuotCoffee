@@ -831,6 +831,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 }
 #eq-box:hover {
   transform: translateY(-10px);
+  cursor: pointer;
 }
 
 #eq-box:hover > .eq-hover {
