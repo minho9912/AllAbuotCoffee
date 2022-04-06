@@ -2,6 +2,10 @@ body {
   background-color: floralwhite;
   color: #ffffff;
   font-family: 'Noto Sans KR', sans-serif;
+  background-image: url('../img/나만의원두/나만의배경.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 article {
   display: flex;

@@ -1,0 +1,20 @@
+[
+  {
+    "img": "http://static1.e-himart.co.kr/contents/goods/00/07/01/02/01/0007010201__LORD-5-NA__M_220_220.jpg",
+    "alt": "\ucee4\ud53c\ub85c\ub4dc \ub0a8\ubbf8\uc544\ud504\ub9ac\uce74 \ucea1\uc290\ucee4\ud53c 5\uc885 \ub124\uc2a4\ud504\ub808\uc18c\ud638\ud658",
+    "link": "/app/goods/goodsDetail?goodsNo=0007010201",
+    "price": "27000\uc6d0"
+  },
+  {
+    "img": "http://static2.e-himart.co.kr/contents/goods/00/07/01/02/03/0007010203__LORD-5-NAS__M_220_220.jpg",
+    "alt": "\ucee4\ud53c\ub85c\ub4dc \ub0a8\ubbf8 \uc544\uc2dc\uc544 \ucea1\uc290\ucee4\ud53c 5\uc885 \ub124\uc2a4\ud504\ub808\uc18c\ud638\ud658",
+    "link": "/app/goods/goodsDetail?goodsNo=0007010203",
+    "price": "30000\uc6d0"
+  },
+  {
+    "img": "http://static1.e-himart.co.kr/contents/goods/00/08/12/35/33/0008123533__N148__M_220_220.jpg",
+    "alt": "\ucee4\ud53c\ub85c\ub4dc \ucf54\uc2a4\ud0c0\ub9ac\uce74 \uc2f1\uae00\ube48 \ucea1\uc290\ucee4\ud53c 50\ucea1\uc290 \ub124\uc2a4\ud504\ub808\uc18c",
+    "link": "/app/goods/goodsDetail?goodsNo=0008123533",
+    "price": "26000\uc6d0"
+  }
+]
