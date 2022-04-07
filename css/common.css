@@ -327,7 +327,7 @@ section.back-img > .coffee-info > .info-1 {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
-  background-color: rgb(181, 110, 29);
+  background-color: rgb(103, 76, 46);
   border: 4px dashed #fff;
 }
 section.back-img > .coffee-info > .coffee-info2 {
@@ -660,7 +660,6 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 .beans-box {
   position: relative;
   width: 100%;
-  background-image: url('../img/coffee-6483805_960_720.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* background-color: rgb(252, 236, 196);
@@ -668,6 +667,15 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   border-left: none;
   border-right: none;
   padding-top: 1px;
+}
+.beans-box::before {
+  content: '';
+  position: absolute;
+  width: 1100px;
+  height: 100px;
+  background-color: #767676;
+  top: 46%;
+  left: 12.5%;
 }
 .beans-box > .line {
   margin-top: 30px;

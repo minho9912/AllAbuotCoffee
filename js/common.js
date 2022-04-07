@@ -61,7 +61,6 @@ function floatingObject(selector, delay, size) {
     delay: random(0, delay),
   });
 }
-floatingObject('.beans-box-af', 1, 15);
 floatingObject('.video-w', 1, 15);
 
 var ctrl = new ScrollMagic.Controller();
