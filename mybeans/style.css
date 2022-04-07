@@ -100,17 +100,19 @@ article {
 .question-content {
   font-size: 24px;
   margin-bottom: 30px;
-  color: #ff9300;
+  color: rgb(143, 60, 238);
+  background-color: rgba(0, 0, 0, 0.418);
 }
 
 .result-message {
   background-color: #0000008e;
   color: #ffffff;
   margin-top: 24px;
-  margin: o auto;
+  margin: 30px auto;
   font-size: 36px;
   font-weight: 500;
   text-align: center;
+  width: 300px;
 }
 .myhome {
   margin: 0 auto;
