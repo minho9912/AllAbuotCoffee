@@ -6,6 +6,7 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 article {
   display: flex;
@@ -29,20 +30,24 @@ article {
 }
 
 #img {
-  width: 300px;
-  height: 300px;
+  width: 330px;
+  height: 340px;
   margin: 0 auto;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
 }
 
 .main-title {
   font-size: 30px;
-  color: #7c7c7c;
+  color: #fdfdfd;
+  padding: 10px 0px;
+  background-color: #1f1f1f7c;
 }
 
 .sub-title {
   font-size: 36px;
-  font-weight: 100;
-  color: #1f1f1f;
+  font-weight: 500;
+  color: #0817f2;
 }
 
 .btn-start {
@@ -70,17 +75,27 @@ article {
   margin-bottom: 40px;
   color: #ffffff;
 }
-
+.coffee-box {
+}
+.coffee-box > img:nth-child(1) {
+  position: absolute;
+  top: 95%;
+}
+.coffee-box > img:nth-child(2) {
+  position: absolute;
+  top: 82%;
+  right: 0;
+}
 .start-cover {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .progress-bar {
-  background-color: #ff9300;
+  background-color: #92e96d;
 }
 .progress {
-  background-color: #525764;
+  background-color: #919191d4;
 }
 .question-content {
   font-size: 24px;
@@ -89,23 +104,37 @@ article {
 }
 
 .result-message {
-  color: #363636;
+  background-color: #0000008e;
+  color: #ffffff;
   margin-top: 24px;
   margin: o auto;
   font-size: 36px;
-  font-weight: 100;
+  font-weight: 500;
   text-align: center;
 }
-
+.myhome {
+  margin: 0 auto;
+  border-radius: 10%;
+}
+.myhome > a {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  color: #2f457d;
+}
+.myhome > a:hover {
+  text-decoration: none;
+  color: #607a33;
+}
 .result-champion {
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 27px;
+  font-weight: 500;
   color: #363636;
 }
 .result-explain {
-  font-size: 20px;
-  font-weight: normal;
-  color: #ff9300;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1d5c2a;
 }
 
 .result {
@@ -127,7 +156,8 @@ article {
 
 .b_img {
   width: 500px;
-  height: 200px;
+  height: 300px;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
+  box-shadow: 1px 1px 5px #ffffff;
 }
