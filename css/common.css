@@ -984,7 +984,8 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 
 .info-box > .info-box-two > .inner > .info-box-beans > a:hover {
   cursor: pointer;
-  background-color: #000;
+  background-color: rgb(141, 180, 141);
+  color: #fff;
 }
 
 /* login */
