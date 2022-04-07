@@ -58,7 +58,7 @@ article {
 }
 
 .btn-answer {
-  background-color: #363636;
+  background-color: #494949;
   border: #1f1f1f;
   width: 320px;
   margin: 0 auto;
@@ -100,12 +100,13 @@ article {
 .question-content {
   font-size: 24px;
   margin-bottom: 30px;
-  color: rgb(143, 60, 238);
-  background-color: rgba(0, 0, 0, 0.418);
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.532);
+  padding: 10px 0px;
 }
 
 .result-message {
-  background-color: #0000008e;
+  background-color: #748e37;
   color: #ffffff;
   margin-top: 24px;
   margin: 30px auto;
@@ -123,6 +124,7 @@ article {
   font-weight: normal;
   font-size: 20px;
   color: #2f457d;
+  margin: 0px 20px;
 }
 .myhome > a:hover {
   text-decoration: none;
@@ -162,4 +164,6 @@ article {
   text-align: center;
   margin: 30px auto;
   box-shadow: 1px 1px 5px #ffffff;
+}
+.btn-answer {
 }
