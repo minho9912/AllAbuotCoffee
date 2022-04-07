@@ -838,6 +838,10 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   display: block;
   transform: translateY(-50px);
 }
+.gnb-v:hover {
+  cursor: pointer;
+  color: rgb(125, 202, 119);
+}
 
 /* beans-info */
 .beans-info {
