@@ -32,6 +32,10 @@ var swiper = new Swiper('.mySwiper', {
 var swiper = new Swiper('.beans-slide', {
   effect: 'cards',
   grabCursor: true,
+  pagination: {
+    el: '.beans-slide > .swiper-pagination',
+    clickable: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
