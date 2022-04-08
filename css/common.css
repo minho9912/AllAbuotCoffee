@@ -622,6 +622,12 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   position: absolute;
   z-index: 9999;
 }
+.swiper-container.beans-slide > .swiper-button-next {
+  right: -100px;
+}
+.swiper-container.beans-slide > .swiper-button-prev {
+  left: -100px;
+}
 
 .swiper-container.beans-slide > .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -645,7 +651,9 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   height: 50px;
   background-image: url('../img/circle-chevron-left-solid.svg');
 }
-
+.beans-slide.inner {
+  width: 250px;
+}
 .beans-slide > .swiper-wrapper {
   padding-bottom: 60px;
   padding-top: 60px;
@@ -659,7 +667,6 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 /* box-slide */
 .beans-box {
   position: relative;
-  width: 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* background-color: rgb(252, 236, 196);
@@ -668,14 +675,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   border-right: none;
   padding-top: 1px;
 }
-.beans-box::before {
-  content: '';
-  position: absolute;
-  width: 1100px;
-  height: 100px;
-  background-color: #767676;
-  top: 46%;
-  left: 12.5%;
+.beans-box > .beans-slide {
 }
 .beans-box > .line {
   margin-top: 30px;

@@ -17,18 +17,27 @@ var swiper = new Swiper('.mySwiper', {
   },
 });
 
-var swiper2 = new Swiper('.beans-slide', {
-  slidesPerView: 3, //한번에 보여줄 슬라이드 개수
-  spaceBetween: -100,
-  pagination: {
-    el: '.beans-slide > .swiper-pagination',
-    clickable: true,
-  },
+// var swiper2 = new Swiper('.beans-slide', {
+//   slidesPerView: 3, //한번에 보여줄 슬라이드 개수
+//   spaceBetween: -100,
+//   pagination: {
+//     el: '.beans-slide > .swiper-pagination',
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+var swiper = new Swiper('.beans-slide', {
+  effect: 'cards',
+  grabCursor: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
+
 var count2 = 9;
 var nxt = document.querySelector('.beans-box > .swiper-container > .swiper-button-next');
 var prev = document.querySelector('.beans-box > .swiper-container > .swiper-button-prev');
