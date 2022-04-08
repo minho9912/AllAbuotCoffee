@@ -667,6 +667,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 /* box-slide */
 .beans-box {
   position: relative;
+  background-color: rgb(237, 190, 137);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* background-color: rgb(252, 236, 196);
@@ -675,7 +676,25 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   border-right: none;
   padding-top: 1px;
 }
-.beans-box > .beans-slide {
+.beans-box-back {
+  position: absolute;
+  width: 100%;
+  height: 445px;
+  background-color: rgba(157, 157, 157, 0.25);
+  top: 0;
+  z-index: 0;
+  display: flex;
+}
+.beans-box-back > span {
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 330px;
+  text-align: center;
+  line-height: 445px;
+  font-weight: 700;
+  color: #0c0c0a;
+  opacity: 0.2;
+  -webkit-text-stroke: 3px #fff;
 }
 .beans-box > .line {
   margin-top: 30px;
@@ -700,6 +719,8 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   top: 30%;
   left: 20%;
   opacity: 1;
+}
+.beans-box > .beans-slide > .swiper-wrapper > .swiper-slide {
 }
 .beans-box > .beans-slide > .swiper-wrapper > .swiper-slide:nth-of-type(1) .beans-box-af {
   width: 250px;
@@ -756,7 +777,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 }
 .beans-box-af:hover {
   cursor: pointer;
-  transform: translateY(-10px);
+  transform: scale(110%);
 }
 
 .beans-box-af:hover > .af-hover {
