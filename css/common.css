@@ -178,6 +178,7 @@ input[id='menuicon'] + label span {
   border-radius: 30px;
   background: #000;
   transition: all 0.35s;
+  z-index: 9999;
 }
 input[id='menuicon'] + label span:nth-child(1) {
   top: 0;
