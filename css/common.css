@@ -37,9 +37,7 @@ a {
   position: relative;
 }
 .sign {
-  border: 1px solid rgb(177, 177, 177);
   margin: 30px auto;
-  box-shadow: 1px 2px 3px #ccc;
 }
 
 .sign > img {
@@ -60,16 +58,24 @@ a {
   display: flex;
   justify-content: center;
   padding: 10px 0px;
-  background-color: #f3e2b48c;
+  background-color: rgb(255, 255, 255);
+}
+.sign > .sign-box:nth-child(1) {
+  border-radius: 10px 10px 0px 0px;
+}
+.sign > .sign-box:nth-child(7) {
+  border-radius: 0px 0px 10px 10px;
 }
 .sign > .sign-box > label > span {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 20px;
+  font-weight: 550;
 }
 .sign > .sign-box > label > input {
   width: 400px;
   height: 30px;
   margin-top: 10px;
+  border: solid 1px #cccccc;
 }
 .sign > .sign-box > label > #user-info {
   width: 127px;
@@ -84,6 +90,9 @@ a {
 .sign > .sign-box > #pass {
   position: relative;
 }
+.sign > .sign-box > label > img {
+  margin: 0 auto;
+}
 .sign > .sign-box > #pass::before {
   position: absolute;
   content: '';
@@ -97,16 +106,17 @@ a {
 }
 .sign > .sign-box > label > #phone {
   width: 140px;
-  height: 36px;
-  background-color: #ff9252;
+  height: 34px;
+  background-color: #755139;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   font-weight: bold;
   color: #fff;
+  margin-top: 16px;
 }
 .sign > .sign-box > label > #phone:hover {
-  background-color: #59f89b;
+  background-color: rgb(188, 235, 188);
 }
 .sign > .sign-box > label > #phone:active {
   background-color: #aaaaaa;
@@ -116,7 +126,7 @@ a {
   width: 410px;
   height: 40px;
   font-size: 16px;
-  background-color: #ff9252;
+  background-color: #755139;
   border: none;
   font-weight: bold;
   color: #fff;
@@ -124,7 +134,7 @@ a {
   transition: background-color 0.2s ease-in-out;
 }
 .sign > .sign-box > #signin-btn:hover {
-  background-color: #59f89b;
+  background-color: rgb(188, 235, 188);
 }
 .sign > .sign-box > #signin-btn:active {
   background-color: #aaaaaa;
@@ -624,10 +634,8 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   z-index: 9999;
 }
 .swiper-container.beans-slide > .swiper-button-next {
-  right: -100px;
 }
 .swiper-container.beans-slide > .swiper-button-prev {
-  left: -100px;
 }
 
 .swiper-container.beans-slide > .swiper-button-next::after,
@@ -653,7 +661,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   background-image: url('../img/circle-chevron-left-solid.svg');
 }
 .beans-slide.inner {
-  width: 250px;
+  width: 1100px;
 }
 .beans-slide > .swiper-wrapper {
   padding-bottom: 60px;
@@ -816,6 +824,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   overflow: hidden;
   z-index: 1;
   box-shadow: 1px 1px 5px rgb(11, 11, 11);
+  margin-right: 10px;
 }
 /* #eq-box > img {
   margin: 0px 5px;
