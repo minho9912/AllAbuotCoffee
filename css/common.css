@@ -38,8 +38,12 @@ a {
 }
 .sign {
   margin: 30px auto;
+  box-shadow: 1px 2px 5px #000;
+  border-radius: 10px;
 }
-
+.sign.inner {
+  width: 790px;
+}
 .sign > img {
   margin: 0 auto;
   font-family: 'Noto Sans KR';
@@ -631,11 +635,13 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 .swiper-container.beans-slide > .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  z-index: 9999;
+  z-index: 8;
 }
 .swiper-container.beans-slide > .swiper-button-next {
+  z-index: 8;
 }
 .swiper-container.beans-slide > .swiper-button-prev {
+  z-index: 8;
 }
 
 .swiper-container.beans-slide > .swiper-button-next::after,
@@ -661,7 +667,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   background-image: url('../img/circle-chevron-left-solid.svg');
 }
 .beans-slide.inner {
-  width: 1100px;
+  width: 1320px;
 }
 .beans-slide > .swiper-wrapper {
   padding-bottom: 60px;
@@ -790,6 +796,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   color: #3004f5;
 }
 /* equipments */
+
 .eq-sec {
   width: 100%;
   background-color: rgb(237, 190, 137);
@@ -824,7 +831,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   overflow: hidden;
   z-index: 1;
   box-shadow: 1px 1px 5px rgb(11, 11, 11);
-  margin-right: 10px;
+  margin: 0px 50px;
 }
 /* #eq-box > img {
   margin: 0px 5px;
@@ -1011,7 +1018,9 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 /* login */
 .inner.login {
   width: 600px;
-  box-shadow: 1px 2px 3px #ccc;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px #000;
+  border-radius: 10px;
 }
 .login-page {
   width: auto;
@@ -1022,6 +1031,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   align-items: center;
   font-size: 20px;
   padding-top: 100px;
+  border-radius: 10px;
 }
 .login-page > label > .uid {
   font-size: 25px;
@@ -1188,4 +1198,13 @@ footer .logo {
 }
 .company-street > .info-com {
   margin-right: 20px;
+}
+
+/* write */
+.formArea {
+  display: block;
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
 }
