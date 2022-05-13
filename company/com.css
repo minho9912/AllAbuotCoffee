@@ -1,0 +1,448 @@
+b,
+span,
+strong,
+input,
+a,
+button,
+pre {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+hgroup,
+details,
+summary,
+figure,
+figcaption {
+  display: block;
+}
+cite {
+  display: inline;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0px;
+  overflow-y: scroll;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+label,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+fieldset {
+  border: none;
+}
+hr {
+  position: absolute;
+  left: -1000%;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  overflow: visible;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+/* 타이틀 */
+#contents .conts_tit {
+  margin: 0 auto 60px;
+  text-align: center;
+}
+#contents .conts_tit h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Noto Sans KR';
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: normal;
+  text-align: center;
+}
+#contents .conts_tit .txt {
+  max-width: 930px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+#contents .icoTit {
+  margin-bottom: 40px;
+  padding-left: 25px;
+  background: url(../../img/kor/mark_ysuCir.png) no-repeat 0 50% !important;
+  color: #000;
+  font-size: 25px;
+  line-height: 29px;
+  margin-top: 50px;
+}
+#contents .icoTit2 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+#contents .icoTit2 > span {
+  display: inline-block;
+  padding-left: 25px;
+  background: url(../../img/kor/mark_ysuCir.png) no-repeat 0 9px !important;
+  color: #000;
+  font-size: 25px;
+  line-height: 29px;
+}
+#contents .icoTit .txt {
+  font-size: 18px;
+}
+#contents .icoTit_txt {
+  margin: 0 0 50px;
+  color: #666;
+  font-size: 14px;
+  line-height: 22px;
+}
+#contents .strongTit {
+  display: block;
+  margin-bottom: 10px;
+  color: #0059ab;
+  font-size: 18px;
+}
+#contents .icoTit3 {
+  margin-bottom: 20px;
+  padding-left: 25px;
+  background: url(../../img/kor/mark_ysuCir02.png) no-repeat 0 50% !important;
+  color: #000;
+  font-size: 25px;
+  line-height: 29px;
+}
+#contents .icoTit4 {
+  margin-bottom: 20px;
+  padding-left: 25px;
+  background: url(../../img/kor/mark_ysuCir03.png) no-repeat 0 50% !important;
+  color: #000;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.searchBox {
+  position: relative;
+  float: right;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: right;
+}
+.searchBox .insert_s {
+  height: 36px;
+  border: 1px solid #d4d5d6;
+  line-height: 34px;
+}
+
+.lineTop_tbArea {
+  border-top: 2px solid #2b2b2b;
+}
+.lineTop_tbArea table a:hover,
+.lineTop_tbArea table a:active {
+  color: #1ab7ea;
+  text-decoration: underline;
+}
+.lineTop_tbArea table .no_article {
+  padding: 30px 0;
+}
+.lineTop_tbArea table .hasArea {
+  position: relative;
+}
+.lineTop_tbArea table .hasArea .hasfile {
+  display: inline-block;
+  overflow: hidden;
+  width: 17px;
+  margin-top: 3px;
+  height: 17px;
+  background: url(../../img/board/ico_fileDown.png) no-repeat 50% 50%;
+  text-indent: -100px;
+}
+.lineTop_tbArea .sort {
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  border: 1px solid #eb439a;
+  background: #fff;
+  color: #eb439a;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.lineTop_tbArea.addPadding table td {
+  padding: 15px;
+}
+li {
+  font-size: 15px;
+  line-height: 22px;
+}
+td {
+  font-size: 15px;
+}
+/* 풀테이블 전체 라인 */
+.lineTop_tbArea .lineTop_tb {
+  width: 100%;
+  border-right: 1px solid #eaeaea;
+}
+.lineTop_tbArea .lineTop_tb th,
+.lineTop_tbArea .lineTop_tb td {
+  padding: 5px;
+  border-left: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.lineTop_tbArea .lineTop_tb th {
+  background: #fafafa;
+  font-size: 15px;
+}
+.lineTop_tbArea .lineTop_tb td {
+  background: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.lineTop_tbArea .lineTop_tb td.txtL {
+  padding-left: 15px;
+}
+
+/* 풀테이블 좌우 no라인 */
+.lineTop_tbArea .lineTop_tb2 {
+  width: 100%;
+  margin-left: -1px;
+}
+.lineTop_tbArea .lineTop_tb2 th,
+.lineTop_tbArea .lineTop_tb2 td {
+  padding: 5px;
+  border-left: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.lineTop_tbArea .lineTop_tb2 th {
+  background: #fafafa;
+  font-size: 15px;
+}
+.lineTop_tbArea .lineTop_tb2 td {
+  background: #fff;
+  font-size: 15px;
+  text-align: center;
+}
+.lineTop_tbArea .lineTop_tb2 td.txtL {
+  padding-left: 15px;
+}
+
+/* noHead테이블 전체라인 */
+.lineTop_tbArea .lineTop_tbL {
+  width: 100%;
+  border-right: 1px solid #eaeaea;
+}
+.lineTop_tbArea .lineTop_tbL thead {
+  display: none;
+}
+.lineTop_tbArea .lineTop_tbL th,
+.lineTop_tbArea .lineTop_tbL td {
+  height: 46px;
+  border-left: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  line-height: 17px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.lineTop_tbArea .lineTop_tbL th {
+  padding: 5px;
+  background: #fafafa;
+  font-size: 15px;
+  font-weight: bold;
+}
+.lineTop_tbArea .lineTop_tbL td {
+  padding: 7px 10px;
+  background: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+.lineTop_tbArea .lineTop_tbL td.txtL {
+  padding-left: 15px;
+}
+
+/* noHead테이블 좌우 no라인 */
+.lineTop_tbArea .lineTop_tbL2 {
+  width: 100%;
+  margin-left: -1px;
+}
+.lineTop_tbArea .lineTop_tbL2 thead {
+  display: none;
+}
+.lineTop_tbArea .lineTop_tbL2 th,
+.lineTop_tbArea .lineTop_tbL2 td {
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  line-height: 17px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.lineTop_tbArea .lineTop_tbL2 th {
+  padding: 5px;
+  background: #fafafa;
+  font-size: 15px;
+  font-weight: bold;
+}
+.lineTop_tbArea .lineTop_tbL2 td {
+  padding: 7px 10px;
+  border-left: 1px solid #eaeaea;
+  background: #fff;
+  font-size: 15px;
+  text-align: left;
+}
+.lineTop_tbArea .lineTop_tbL2 td.txtL {
+  padding-left: 15px;
+}
+/* Tab */
+.conts_tab {
+  overflow: hidden;
+  margin-bottom: 50px;
+  font-size: 0;
+  text-align: center;
+}
+.conts_tab li {
+  display: inline-block;
+}
+.conts_tab li > a {
+  display: block;
+  overflow: hidden;
+  min-width: 140px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  border: 1px solid #fff;
+  background: #f4f4f4;
+  color: #555;
+  font-size: 15px;
+  line-height: 50px;
+  text-align: center;
+  white-space: nowrap;
+}
+.conts_tab li > a:hover,
+.conts_tab li > a:active,
+.conts_tab li.on > a {
+  background: #4c565f url(../../img/kor/bg_resultTab.jpg) no-repeat right bottom;
+  color: #fff;
+  font-weight: bold;
+}
+.conts_tab.typeL li {
+  float: left;
+}
+.campus_way .map {
+  height: 485px;
+}
+.campus_way .map .map_api {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 485px;
+  text-align: center;
+}
+.campus_way .map .map_api #map {
+  height: 485px;
+}
+.campus_way .map .map_api > img {
+  max-width: none;
+}
+.campus_way .map .box_pinkNwhite {
+  position: absolute;
+  left: 50%;
+  margin: 130px 0 0 -530px;
+}
+.campus_way .way_list {
+  padding-top: 50px;
+}
+.campus_way .way_list dl {
+  position: relative;
+  padding-left: 255px;
+}
+.campus_way .way_list dt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 0 65px 0;
+  color: #222;
+  font-size: 25px;
+}
+.campus_way .way_list li:nth-child(1) dt {
+  background: url('../img/스쿨버스.png') no-repeat;
+  background-size: 45px;
+  background-position: bottom;
+  background-position-y: 40px;
+}
+.campus_way .way_list li:nth-child(2) dt {
+  background: url('../img/지하철로고.png') no-repeat;
+  background-size: 60px;
+  background-position: bottom;
+  background-position-y: 40px;
+}
+.campus_way .way_list .mydl dt {
+  background: url('../img/회사소개2.png') no-repeat;
+  background-size: 50px;
+  background-position: bottom;
+  background-position-y: 40px;
+}
+.campus_way .lineTop_tbArea .lineTop_tbL2 th {
+  background: #fff;
+  line-height: 20px;
+}
+.campus_way .lineTop_tbArea .list_dotGray.typeSort li {
+  position: relative; /*padding-left:45px* !important;*/
+  padding-left: 95px !important;
+}
+.campus_way .lineTop_tbArea .list_dotGray.typeSort li > b {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  display: block; /*width:40px;*/
+}
+.mydl {
+  margin-top: 100px;
+}
