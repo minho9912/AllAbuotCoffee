@@ -86,6 +86,7 @@ footer {
         <a href="../sign/sign.html">회원가입</a>
         <a href="../notice/list.html">공지사항</a>
         <a href="../company/info.html">회사소개</a>
+        <a href="./board.html">자유게시판</a>
 
       </div>
       <div class="inner">
@@ -111,12 +112,17 @@ footer {
     </header>
     
     <section>
+      
+      <div class="board_title" style="margin-top: 12vh; margin-left: 17vw; margin-right: 40vw;">
+        <strong>자유게시판</strong>
+        <p>AllAboutCoffee를 이용해주시는 여러분의 공간입니다.</p>
+      </div>
       <script src="../js/board.js"></script>
   </section>
   <section class="page">
 
   </section>
-  <section style="margin-top:2vh; margin-left:5vw; margin-bottom:1vh;">
+  <section style="margin-top:10vh; margin-left:17vw; margin-bottom:1vh;">
       <a href="write.html"><input type="button" value="글쓰기" class="btn btn-board"></input></a> &nbsp;
   </section>
     
@@ -140,5 +146,21 @@ footer {
     </footer>
   </div>
 
+  <script>
+      let bar = document.querySelector('.sidebar > a:nth-of-type(1)');
+  let bar2 = document.querySelector('.sidebar > a:nth-of-type(2)');
+     window.onload = function login() {
+    if(localStorage.getItem('state') == 'true'){
+      bar.remove();
+      bar2.textContent = "로그아웃"
+      bar2.setAttribute("href", "../index.html")
+      bar2.addEventListener("click", function(){
+        localStorage.setItem('state', 'false');
+        window.location.reload();
+      })
+    }
+    
+  }
+  </script>
   </body>
 </html>

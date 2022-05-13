@@ -38,7 +38,7 @@ function clickPosting(index, title, content) {
   let table = document.createElement('table');
   table.style.border = '1px solid black';
   table.style.marginTop = '3vh';
-  table.style.marginLeft = '5vw';
+  table.style.marginLeft = '4vw';
   table.style.width = '90vw';
   table.style.paddingTop = '1vh';
   table.style.paddingBottom = '1vh';
@@ -226,15 +226,11 @@ function moveToList() {
   location.href = 'board.html';
 }
 
-function moveToHome() {
-  location.href = 'index.html';
-}
-
 function makeTable(variable, variable2) {
   let table = document.createElement('table');
   table.style.marginTop = '3vh';
-  table.style.marginLeft = '5vw';
-  table.style.marginRight = '5vw';
+  table.style.marginLeft = '17vw';
+  table.style.marginRight = '17vw';
 
   let firstRow = document.createElement('tr');
   firstRow.style.textAlign = 'center';
@@ -278,7 +274,7 @@ function makeTable(variable, variable2) {
       tr.style.backgroundColor = 'white';
       tr.style.border = '1px solid #ccc';
     } else {
-      tr.style.backgroundColor = '#f2edd7';
+      tr.style.backgroundColor = '#white';
       tr.style.border = '1px solid #ccc';
     }
     let td = document.createElement('td');
@@ -330,11 +326,18 @@ function replyInput(index) {
   replyForm.addEventListener('submit', submitReply);
 
   function submitReply(e) {
+    var today = new Date();
+
+    var year = today.getFullYear();
+    var month = ('0' + (today.getMonth() + 1)).slice(-2);
+    var day = ('0' + today.getDate()).slice(-2);
+
+    var dateString = year + '-' + month + '-' + day;
     e.preventDefault();
     let replyArray = [];
     let replyForm = e.target;
     let input2 = replyForm.querySelector('input');
-    let value = input2.value;
+    let value = dateString + ` |  [${localStorage.getItem('login')}] :      ` + input2.value;
 
     let item = {};
     item.content = value;

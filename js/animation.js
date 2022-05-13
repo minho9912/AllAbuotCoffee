@@ -1,4 +1,4 @@
-const move_item = document.querySelectorAll('.info-box');
+// const move_item = document.querySelectorAll('.info-box');
 
 // _.throttle (함수, 시간)
 window.addEventListener(

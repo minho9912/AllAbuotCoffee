@@ -1,0 +1,224 @@
+/* 1 */
+div#marker_1_tan {
+  background: url('../img/나라/국기/탄자니아.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_1_tan:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+
+#marker_1_tan::before {
+  position: absolute;
+  content: '탄자니아';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  transition: 0.5s all ease-in-out !important;
+}
+div#marker_1_tan:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 2 */
+div#marker_2_cos {
+  background: url('../img/나라/국기/코스타리카.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_2_cos:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+div#marker_2_cos::before {
+  position: absolute;
+  content: '코스타리카';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  transition: 0.5s all ease-in-out !important;
+}
+div#marker_2_cos:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 3 */
+div#marker_3_gaw {
+  background: url('../img/나라/국기/과테말라.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_3_gaw:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+div#marker_3_gaw::before {
+  position: absolute;
+  content: '과테말라';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all ease-in-out !important;
+  border-radius: 10px;
+}
+div#marker_3_gaw:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 4 */
+div#marker_4_ken {
+  background: url('../img/나라/국기/케냐.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_4_ken:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+div#marker_4_ken::before {
+  position: absolute;
+  content: '케냐';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all ease-in-out !important;
+  border-radius: 10px;
+}
+div#marker_4_ken:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 5 */
+div#marker_5_bra {
+  background: url('../img/나라/국기/브라질.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_5_bra:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+div#marker_5_bra::before {
+  position: absolute;
+  content: '브라질';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all ease-in-out !important;
+  border-radius: 10px;
+}
+div#marker_5_bra:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 6 */
+div#marker_6_eth {
+  background: url('../img/나라/국기/에티오피아.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s all ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_6_eth:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+
+  /* opacity: 1 !important; */
+}
+div#marker_6_eth::before {
+  position: absolute;
+  content: '에티오피아';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all ease-in-out !important;
+  border-radius: 10px;
+}
+div#marker_6_eth:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}
+/* 7 */
+div#marker_7_col {
+  background: url('../img/나라/국기/콜롬비아.png') no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s transform ease-in-out !important;
+  /* opacity: 0 !important; */
+}
+div#marker_7_col:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  /* opacity: 1 !important; */
+}
+div#marker_7_col::before {
+  position: absolute;
+  content: '콜롬비아';
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  background-color: rgb(187, 112, 112);
+  bottom: -70px;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 50px;
+  transition: 0.5s all ease-in-out !important;
+  border-radius: 10px;
+}
+div#marker_7_col:hover:before {
+  background-color: rgb(92, 184, 130) !important;
+  /* opacity: 1 !important; */
+}

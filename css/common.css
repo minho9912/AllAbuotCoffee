@@ -321,37 +321,36 @@ header .inner ul li {
 
 section.back-img {
 }
-
-section.back-img > .coffee-info {
+.sec-info-title > span {
   width: 100%;
-  height: 400px;
-  background-image: url('../img/caffeine-g56e749f13_1920.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 50px 20px 0px 20px;
-  box-sizing: border-box;
-  align-items: center;
+  justify-content: center;
 }
-section.back-img > .coffee-info > .info-1 {
-  margin: 0 auto;
+.third-info-title > span {
+  width: 100%;
+  justify-content: center;
+}
+.foc-info-title > span {
+  width: 100%;
+  justify-content: center;
+}
+
+.line2 {
+  position: absolute;
+  top: 0;
+  right: 29.4%;
+  margin-top: 30px;
   text-align: center;
-  width: 500px;
+  width: 200px;
   line-height: 40px;
   height: 40px;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
   background-color: rgb(103, 76, 46);
-  border: 4px dashed #fff;
+  border: 2px dashed #fff;
 }
-section.back-img > .coffee-info > .coffee-info2 {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-}
-section.back-img > .coffee-info > .coffee-info2 > .info-box {
+
+.swiper-slide > .info-box {
   width: 200px;
   height: 200px;
   background-color: rgba(90, 209, 169, 0.63);
@@ -631,7 +630,11 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   background-color: rgba(39, 39, 39, 0.616);
 }
 /* swiper2 */
-
+.swiper-container.beans-slide {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
 .swiper-container.beans-slide > .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
@@ -678,11 +681,24 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   position: absolute;
   bottom: -1px;
 }
+/* contry */
+.contry {
+  position: relative;
+  background-image: url('../img/나라별원두/나라별원두지도.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* background-color: rgb(252, 236, 196);
+  border: 3px solid rgb(159, 180, 250); */
+  border-left: none;
+  border-right: none;
+  padding-top: 1px;
+  height: 500px;
+}
 
 /* box-slide */
 .beans-box {
   position: relative;
-  background-color: rgb(237, 190, 137);
+  background-image: url('../img/나라별원두/커피의효능.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* background-color: rgb(252, 236, 196);
@@ -831,7 +847,6 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   overflow: hidden;
   z-index: 1;
   box-shadow: 1px 1px 5px rgb(11, 11, 11);
-  margin: 0px 50px;
 }
 /* #eq-box > img {
   margin: 0px 5px;
@@ -913,20 +928,19 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 /* info-box */
 .info-box {
   width: 100%;
-  height: 400px;
+  height: 480px;
   background-color: rgb(126, 179, 228);
   position: relative;
 }
 .info-box-two {
   width: 100%;
-  height: 400px;
+  height: 480px;
   margin-bottom: 40px;
   background-image: url('../img/커피배경2.jpg');
   background-size: 100% 100%;
 
   background-color: rgba(0, 0, 0, 0.26);
   position: absolute;
-  top: 0;
 }
 .info-box > .info-box-two > .inner > span {
   display: flex;
@@ -949,23 +963,34 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   color: rgb(255, 255, 255);
   font-size: 1.7rem;
   position: relative;
-  bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.432);
+  bottom: 22px;
+  background-color: rgb(96, 137, 120);
   width: 40%;
+}
+.info-box > .info-box-two > .inner > p:nth-of-type(1) {
+  border-radius: 10px 10px 0px 0px;
+  border: 3px solid #f2edd7;
+  border-bottom: none;
+}
+.info-box > .info-box-two > .inner > p:nth-of-type(2) {
+  border-radius: 0px 0px 10px 10px;
+  border: 3px solid #f2edd7;
+  border-top: none;
 }
 .info-box > .info-box-two > .inner > a > .sigin-box {
   font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
-  width: 150px;
-  height: 70px;
+  width: 223px;
+  height: 100px;
   border-radius: 10px;
-  border: 3px solid #fff;
+  border: 3px solid #f2edd7;
   text-align: center;
-  margin-left: 60px;
-  line-height: 70px;
+  margin-left: 16px;
+
+  line-height: 100px;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: 4px;
   background-color: #755139;
   transition: background-color 0.5s ease;
@@ -979,13 +1004,13 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 .info-box > .info-box-two > .inner > .info-box-beans {
   float: right;
   width: 500px;
-  height: 171px;
+  height: 100px;
   background-color: #755139;
   position: absolute;
   border-radius: 10px;
   border: 3px solid #f2edd7;
   right: 1.5%;
-  top: 62%;
+  top: 58.5%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -996,8 +1021,8 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
 }
 .info-box > .info-box-two > .inner > .info-box-beans > img {
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
 }
 .info-box > .info-box-two > .inner > .info-box-beans > a {
   background-color: #f2edd7;
@@ -1005,7 +1030,7 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   border-radius: 10px;
   font-size: 1.5rem;
   border: 2px solid #fff;
-  padding: 30px;
+  padding: 22px;
   transition: background-color 0.5s ease;
 }
 
@@ -1013,6 +1038,12 @@ section.back-img > .coffee-info > .coffee-info2 > .info-box {
   cursor: pointer;
   background-color: rgb(141, 180, 141);
   color: #fff;
+}
+.info-box > .info-box-two > .inner > .info2 {
+  top: 99.99%;
+  background-color: rgb(223, 163, 85);
+}
+.info-box > .info-box-two > .inner > .info2 > a {
 }
 
 /* login */
@@ -1207,4 +1238,19 @@ footer .logo {
   margin-left: 5vw;
   margin-right: 5vw;
   width: 90vw;
+}
+
+.board-1 {
+  font-size: 1.5rem;
+}
+.main-info > a > button {
+  transition: 0.5s background-color, color ease-in-out;
+}
+.main-info > a > button:hover {
+  cursor: pointer;
+  background-color: rgb(141, 180, 141) !important;
+  color: #fff !important;
+}
+.main-info > a > button:active {
+  background-color: #272727 !important;
 }

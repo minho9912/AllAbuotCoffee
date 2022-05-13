@@ -157,6 +157,20 @@
           table.appendChild(tr);
         }
       }
+      let bar = document.querySelector('.sidebar > a:nth-of-type(1)');
+  let bar2 = document.querySelector('.sidebar > a:nth-of-type(2)');
+      window.onload = function login() {
+    if(localStorage.getItem('state') == 'true'){
+      bar.remove();
+      bar2.textContent = "로그아웃"
+      bar2.setAttribute("href", "../index.html")
+      bar2.addEventListener("click", function(){
+        localStorage.setItem('state', 'false');
+        window.location.reload();
+      })
+    }
+    
+  }
       </script>
   </body>
 </html>

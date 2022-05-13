@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AllAboutCoffee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="./country.css">
+
+    <script defer src="../js/notice.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"
+    integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+    integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  </head>
+  <style>
+ 
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#body-wrapper {
+    position: relative;
+}
+
+#body-content {
+    margin-top: 0px;
+    padding-bottom: 470px; /* footer의 높이 */
+}
+
+footer {
+    width: 100%;
+    height: 200px; /* footer의 높이 */
+    position: absolute;  
+    bottom: 0;
+    left: 0;
+}
+
+
+  </style>
+  <body>
+    <div class="header-logo">
+
+      <a href="../index.html"> <img src="../img/logo1.png" alt="사진" width="200"></a>
+    
+      
+    </div>
+
+    <header class="header">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon" id="side" onclick="nxtprev()">
+	    <span span></span>
+	    <span></span>
+	    <span></span>
+      </label>
+      <div div class="sidebar">
+        <a href="../sign/login.html">로그인</a>
+        <a href="../sign/sign.html">회원가입</a>
+        <a href="../notice/list.html">공지사항</a>
+        <a href="../company/info.html">회사소개</a>
+        <a href="./board.html">자유게시판</a>
+
+      </div>
+      <div class="inner">
+    
+        <ul>
+          <li >
+            <a href="../search/beans.html" id="beans-gnb" class="gnb-v">BEANS</a>
+          
+          </li>
+          
+          <!-- <li><a href="./search/beans.html">BEANS</a></li> -->
+          <li><a href="../search/dripper.html" class="gnb-v">DRIPPER</a></li>
+          <!-- <li><a href="./search/dripper.html">DRIPPER</a></li> -->
+          <li><a href="../search/grinder.html" class="gnb-v">GRINDER</a></li>
+          <!-- <li><a href="./search/grinder.html">GRINDER</a></li> -->
+          <li><a href="../search/maker.html" class="gnb-v">MAKER</a></li>
+          <!-- <li><a href="./search/maker.html">MAKER</a></li> -->
+        </ul>
+
+       
+        </ul>
+      </div>
+    </header>
+    
+    <section class="inner eq-sec" style="background-color: #fff ">
+      <section class="line">
+        BEANS
+        
+      </section>
+      </section>
+
+
+    <section class="beans-map inner" style="position: relative; width: 1320px; height: 500px; background-image: url('../img/나라별원두/지도2.png'); background-size: 100% 100%; margin-top: 30px; ">
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_1" style="position: absolute; content: ''; bottom: 35%; left: 53%;" width="30">
+      <div id="marker_1_tan" onclick="tan()" style="position: absolute; content: ''; bottom: 36%; left: 44%; border-radius: 50%; box-shadow: 1px 2px 5px #000; z-index: 1; width: 100px; height: 100px; " ></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_2" style="position: absolute; content: ''; bottom: 39%; left: 28%;" width="30">
+      <div id="marker_2_cos" onclick="cos()" style="position: absolute; content: ''; bottom: 50%; left: 31%; border-radius: 50%; box-shadow: 1px 2px 5px #000; width: 100px; height: 100px; z-index: 1;"></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_3" style="position: absolute; content: ''; bottom: 44%; left: 26%;" width="30">
+      <div id="marker_3_gaw" onclick="mala()" style="position: absolute; content: ''; bottom: 50%; left: 17%; border-radius: 50%; box-shadow: 1px 2px 5px #000; width: 100px; height: 100px;" ></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_4" style="position: absolute; content: ''; bottom: 26%; left: 53%;" width="30">
+      <div id="marker_4_ken" onclick="kenya()" style="position: absolute; content: ''; bottom: 17%; left: 56%; border-radius: 50%; box-shadow: 1px 2px 5px #000; width: 100px; height: 100px;" ></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_5" style="position: absolute; content: ''; bottom: 25%; left: 33%;" width="30">
+      <div id="marker_5_bra" onclick="san()" style="position: absolute; content: ''; bottom: 15%; left: 36%; border-radius: 50%; box-shadow: 1px 2px 5px #000; width: 100px; height: 100px;" ></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_6" style="position: absolute; content: ''; bottom: 48%; left: 55%;" width="30">
+      <div id="marker_6_eth"onclick="yega()"  style="position: absolute; content: ''; bottom: 52%; left: 58%; border-radius: 50%; box-shadow: 1px 2px 5px #000; z-index: 1; width: 100px; height: 100px; " ></div>
+
+      <img src="../img/나라별원두/google-g55a590192_1280.png" alt="마커1" id="marker_7" style="position: absolute; content: ''; bottom: 33%; left: 29.3%;" width="30">
+      <div id="marker_7_col" onclick="col()" style="position: absolute; content: ''; bottom: 15%; left: 22%; border-radius: 50%; box-shadow: 1px 2px 5px #000; width: 100px; height: 100px;" ></div>
+      </section>
+      
+
+  <div id="body-wrapper">
+    <div id="body-content"></div>
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+          <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+        </ul>
+        <div class="info">
+          <span>사업자등록번호 000-00-00000</span>
+          <span>더블조 졸업작품</span>
+          <span>TEL : 010-5718-3020</span>
+          <span>웹:최민호 / 디자인:오승엽</span>
+        </div>
+        <p class="copyright">&copy;<span class="this-year"></span> All About Coffee. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+ function random(min, max) {
+        // `.toFixed()`를 통해 반환된 문자 데이터를,
+        // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+        return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+      }
+
+      function floatingObject(selector, delay, size) {
+        gsap.to(selector, random(1,1.1), {
+          y: size,
+          repeat: -1, // 무한반복
+          yoyo: true,
+          ease: Power1.easeInOut,
+          delay: random(0, delay),
+        });
+      }
+      floatingObject('#marker_1', 1, 3);
+      floatingObject('#marker_2', 1, 3);
+      floatingObject('#marker_3', 1, 3);
+      floatingObject('#marker_4', 1, 3);
+      floatingObject('#marker_5', 1, 3);
+      floatingObject('#marker_6', 1, 3);
+      floatingObject('#marker_7', 1, 3);
+    
+
+    kenya = () => {
+  location.href = '../beans-info/beans-info.html?beans=kenya';
+};
+tan = () => {
+  location.href = '../beans-info/beans-info.html?beans=tanzania';
+};
+san = () => {
+  location.href = '../beans-info/beans-info.html?beans=brazil';
+};
+cos = () => {
+  location.href = '../beans-info/beans-info.html?beans=costarica';
+};
+col = () => {
+  location.href = '../beans-info/beans-info.html?beans=columbia';
+};
+yega = () => {
+  location.href = '../beans-info/beans-info.html?beans=ethiopia';
+};
+mala = () => {
+  location.href = '../beans-info/beans-info.html?beans=guatemala';
+};
+
+let bar = document.querySelector('.sidebar > a:nth-of-type(1)');
+  let bar2 = document.querySelector('.sidebar > a:nth-of-type(2)');
+window.onload = function login() {
+    if(localStorage.getItem('state') == 'true'){
+      bar.remove();
+      bar2.textContent = "로그아웃"
+      bar2.setAttribute("href", "../index.html")
+      bar2.addEventListener("click", function(){
+        localStorage.setItem('state', 'false');
+        window.location.reload();
+      })
+    }
+    
+  }
+  </script>
+
+  </body>
+</html>

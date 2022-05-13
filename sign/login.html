@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/common.css" />
+    <script defer src="../js/sign.js"></script>
     <script defer src="../js/notice.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     
@@ -72,12 +73,12 @@
           <span class="uid">아이디</span>
           <input type="text" name="login_id" id="login-id"><br><br>
           <span class="upwd">비밀번호</span>
-          <input type="password" name="login_id" id="login-id">
+          <input type="password" name="login_id" id="login-pw">
         </label>
         <br>
         <br>
         <br>
-        <button>로그인</button>
+        <button onclick="json2()">로그인</button>
 
         <hr>
         <div class="searching">
@@ -108,5 +109,21 @@
         <p class="copyright">&copy;<span class="this-year"></span> All About Coffee. All Rights Reserved.</p>
       </div>
     </footer>
+ <script>
+     let bar = document.querySelector('.sidebar > a:nth-of-type(1)');
+  let bar2 = document.querySelector('.sidebar > a:nth-of-type(2)');
+   window.onload = function login() {
+    if(localStorage.getItem('state') == 'true'){
+      bar.remove();
+      bar2.textContent = "로그아웃"
+      bar2.setAttribute("href", "../index.html")
+      bar2.addEventListener("click", function(){
+        localStorage.setItem('state', 'false');
+        window.location.reload();
+      })
+    }
+    
+  }
+ </script>
   </body>
 </html>
