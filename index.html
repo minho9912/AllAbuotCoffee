@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+
     <link rel="icon" href="./img/logo1.png" />
     
     <script src=https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js> </script> 
@@ -100,7 +102,7 @@
     
 
 
-    <div class="swiper-container mySwiper">
+    <div class="swiper-container mySwiper" style="height: 600px !important;">
       <div class="swiper-wrapper ">
         <div class="swiper-slide">
           <img src="./img/슬라이드-드리퍼2.png" width="1980" height="500"/>
@@ -130,30 +132,7 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <div class="info-box">
-   
-      <div class="info-box-two">
-        <div class="inner">
-          <span> ALL ABOUT COFFEE</span>
-          <p>코로나로 인해 외출이 부담스러운 요즘</p>
-          <p>따뜻한 커피 한잔, 홈카페로 즐기세요</p>
-          <a href="./sign/sign.html"><div class="sigin-box sigin-one">회원가입</div></a>
-          <a href="./sign/login.html"><div class="sigin-box sigin-two">로그인</div></a>
-          <div class="info-box-beans"><img src="./img/logo1.png" alt="logo"><a href="./mybeans/mybeans.html">나만의 원두 찾기</a> </div>
-          <div class="info-box-beans info2"><img src="./img/logo1.png" alt="logo"><a href="./blend/blend.html">커피 블렌딩 하기</a> </div>
-        </div>
 
-      </div>
-    </div>
-
-  
-
-
-   
-    
-   
-
-    
    
    
     <section class="contry" style="position: relative;">
@@ -182,27 +161,29 @@
       </div>
     </section>
     
+
+    
     <section class="beans-box " style="width: 100%; height:400px">  
       <section class="line2">
         커피의 효능
       </section>
-      <div class="swiper-container beans-slide inner " style="width: 1320px;">
+      <div class="swiper-container beans-slide inner swiper-grid" style="width: 1320px;">
         <div class="swiper-wrapper beans-sk">
           
           <div class="swiper-slide beans-sk">
-            <div class="info-box">집중력 향상<br>졸음방지</div>
+            <div class="info-box info-box-1">집중력 향상<br>졸음방지</div>
             
           </div>
           <div class="swiper-slide beans-sk">
-            <div class="info-box">심혈관 질환<br>예방</div>
+            <div class="info-box info-box-2">심혈관 질환<br>예방</div>
             
           </div>
           <div class="swiper-slide beans-sk">
-        <div class="info-box">다이어트<br>효과</div>
+        <div class="info-box info-box-3">다이어트<br>효과</div>
           
           </div>
           <div class="swiper-slide beans-sk">
-        <div class="info-box">치매<br>예방</div>
+        <div class="info-box info-box-4">치매<br>예방</div>
           
           </div>
          
@@ -211,6 +192,23 @@
       </div>
     
     </section>
+
+    <div class="info-box">
+   
+      <div class="info-box-two">
+        <div class="inner">
+          <span><pre class="all-pre"> ALL </pre><pre class="about-pre"> ABOUT </pre> <pre class="coffee-pre">COFFEE</pre></span>
+          <p>코로나로 인해 외출이 부담스러운 요즘</p>
+          <p>따뜻한 커피 한잔, 홈카페로 즐기세요</p>
+          <a href="./sign/sign.html"><div class="sigin-box sigin-one">회원가입</div></a>
+          <a href="./sign/login.html" class="abox"><div class="sigin-box sigin-two">로그인</div></a>
+          <div class="info-box-beans"><img src="./img/logo1.png" alt="logo"><a href="./mybeans/mybeans.html">나만의 원두 찾기</a> </div>
+          <div class="info-box-beans info2"><img src="./img/logo1.png" alt="logo"><a href="./blend/blend.html">커피 블렌딩 하기</a> </div>
+        </div>
+
+      </div>
+    </div>
+
 
     <section class="inner eq-sec">
       <section class="line">
@@ -278,6 +276,10 @@
   
   let bar = document.querySelector('.sidebar > a:nth-of-type(1)');
   let bar2 = document.querySelector('.sidebar > a:nth-of-type(2)');
+  let login_box = document.querySelector(".sigin-one");
+  let name_box = document.querySelector(".sigin-two");
+  let name_login_box = document.querySelector(".info-box > .info-box-two > .inner > a");
+  let name_login_box2 = document.querySelector(".abox");
 
   window.onload = function login() {
     if(localStorage.getItem('state') == 'true'){
@@ -285,6 +287,15 @@
       bar2.textContent = "로그아웃"
       bar2.setAttribute("href", "./index.html")
       bar2.addEventListener("click", function(){
+        localStorage.setItem('state', 'false');
+        window.location.reload();
+      })
+      login_box.textContent =  localStorage.getItem('login') + "님"
+      name_box.textContent = "로그아웃"
+      name_login_box.style.pointerEvents = "none"
+      name_login_box2.addEventListener('click', function(){
+        alert("로그아웃합니다.")
+      name_login_box2.setAttribute("href", "./index.html")
         localStorage.setItem('state', 'false');
         window.location.reload();
       })
