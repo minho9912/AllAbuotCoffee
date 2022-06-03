@@ -19,5 +19,6 @@ function json1() {
     window.localStorage.setItem(`upw${idx}`, JSON.stringify(upw));
     alert('가입완료');
   }
-  // console.log(array_data.toString().split('"').includes(uid));
+  console.log(array_data.toString().split('"').includes(uid));
+  console.log(array_data);
 }

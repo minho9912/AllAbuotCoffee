@@ -28,7 +28,7 @@ let thd_thd = document.querySelector('.third-pro');
 function kenya() {
   if (box_list.length < 2) {
     box_list.push('kenya');
-    document.querySelector('.kenya').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(1)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -52,7 +52,7 @@ function kenya() {
 function ethiopia() {
   if (box_list.length < 2) {
     box_list.push('ethiopia');
-    document.querySelector('.ethiopia').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(2)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -76,7 +76,7 @@ function ethiopia() {
 function brazil() {
   if (box_list.length < 2) {
     box_list.push('brazil');
-    document.querySelector('.brazil').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(3)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -100,7 +100,7 @@ function brazil() {
 function guatemala() {
   if (box_list.length < 2) {
     box_list.push('guatemala');
-    document.querySelector('.guatemala').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(4)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -124,7 +124,7 @@ function guatemala() {
 function costarica() {
   if (box_list.length < 2) {
     box_list.push('costarica');
-    document.querySelector('.costarica').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(5)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -148,7 +148,7 @@ function costarica() {
 function columbia() {
   if (box_list.length < 2) {
     box_list.push('columbia');
-    document.querySelector('.columbia').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(6)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;
@@ -172,7 +172,7 @@ function columbia() {
 function tanzania() {
   if (box_list.length < 2) {
     box_list.push('tanzania');
-    document.querySelector('.tanzania').style.display = 'none';
+    document.querySelector('.beans-ho > .card-box:nth-child(7)').style.display = 'none';
   } else {
     alert('두개만 선택가능합니다');
     return;

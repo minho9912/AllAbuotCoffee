@@ -59,22 +59,35 @@
   cursor: pointer;
 
 }
+/* .beans-ho >  img {
+  position: relative;
+  margin-right:10px;
+  width: 200px;
+  transition: 0.5s transform,box-shadow ease-in-out;
+  cursor: pointer;
+
+} */
 
 .beans-ho > .card-box >img:hover {
   transform: translateY(-35px);
-  box-shadow: 2px 5px 3px #000;
 
 }
-.beans-ho > .card-box:nth-child(1)::before{
+/* .beans-ho > img:hover {
+  transform: translateY(-35px);
+  box-shadow: 2px 5px 3px #000;
+
+} */
+.beans-ho > .card-box:nth-child(1)::before,.card-box:nth-child(2)::before,.card-box:nth-child(3)::before,.card-box:nth-child(4)::before,.card-box:nth-child(5)::before,.card-box:nth-child(6)::before,.card-box:nth-child(7)::before{
   position: absolute;
   content: "";
   width: 300px;
   height: 280px;
-  background-image: url("../img/편지.png");
+  background-image: url("../img/그림4.svg");
+  background-size: 202.5px;
   background-repeat: no-repeat;
   z-index: 1;
-  bottom: -100px;
-  right: -50px;
+  bottom: -170px;
+  right: -100px;
 }
 .boxbox{
   justify-content: center;
@@ -100,7 +113,7 @@
   transition: 1s height ease-in-out;
 }
 .mix_btn{
-  position: absolute; bottom: 10px;width: 280px; height: 50px; background-color: #7974d6; left: 60.4%; border-radius: 30px;
+  position: absolute; bottom: 10px;width: 280px; height: 50px; background-color: #d68e74; left: 60.4%; border-radius: 30px;
   box-shadow: 1px 1px 3px #000;
   cursor: pointer;
 }
@@ -116,7 +129,7 @@
 }
 
 .reset_btn{
-  position: absolute; bottom: 10px;width: 280px; height: 50px; background-color: #7974d6; left: 20.4%; border-radius: 30px;
+  position: absolute; bottom: 10px;width: 280px; height: 50px; background-color: #565656d0; left: 20.4%; border-radius: 30px;
   box-shadow: 1px 1px 3px #000;
   cursor: pointer;
 }
@@ -191,7 +204,7 @@
     </header>
     
 
-    <section class="inner" style=" box-shadow: 1px 1px 4px rgb(86, 86, 86);width: 1320px; margin-top: 50px; height: 500px; background-color:rgb(189, 232, 177) ; margin-bottom: 100px; display: flex;" >
+    <section class="inner" style=" box-shadow: 1px 1px 4px rgb(86, 86, 86);width: 1320px; margin-top: 50px; height: 500px; background-color:rgb(169, 196, 242) ; margin-bottom: 100px; display: flex;" >
       
     <div class="boxbox" style="display: flex; width: 100%;">
       <div class="first_box boxbox" style="width: 280px; height: 320px; background-color: antiquewhite; border-radius: 10px 10px 10px 10px; margin-right: 50px; position: relative;">
@@ -248,30 +261,22 @@
     <div class="card-box">
     <img src="../img/나라별원두/케냐.png" alt="케냐" style="border-radius: 10px;" class="beans-hv kenya" onclick="kenya()">
   </div>
-
-  <div class="card-box">
-
+<div class="card-box">
     <img src="../img/나라별원두/에티오피아.png" alt="예가체프" style="border-radius: 10px;" class="beans-hv ethiopia" onclick="ethiopia()">
-    </div>
-
-    <div class="card-box">
-
+  </div>
+  <div class="card-box">
     <img src="../img/나라별원두/브라질.png" alt="브라질" style="border-radius: 10px;" class="beans-hv brazil" onclick="brazil()">
     </div>
     <div class="card-box">
-
     <img src="../img/나라별원두/과테말라.png" alt="과테말라" style="border-radius: 10px;" class="beans-hv guatemala" onclick="guatemala()">
     </div>
-    <div class="card-box">
-
+<div class="card-box">
     <img src="../img/나라별원두/코스타리카.png" alt="코스타리카" style="border-radius: 10px;" class="beans-hv costarica" onclick="costarica()">
     </div>
     <div class="card-box">
-
     <img src="../img/나라별원두/콜롬비아.png" alt="콜롬비아" style="border-radius: 10px;" class="beans-hv columbia" onclick="columbia()">
     </div>
     <div class="card-box">
-
     <img src="../img/나라별원두/탄자니아.png" alt="탄자니아" style="border-radius: 10px;" class="beans-hv tanzania" onclick="tanzania()">
     </div>
   </div>
