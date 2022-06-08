@@ -18,6 +18,7 @@ function json1() {
     window.localStorage.setItem(`uid${idx}`, JSON.stringify(uid));
     window.localStorage.setItem(`upw${idx}`, JSON.stringify(upw));
     alert('가입완료');
+    location.href = '../index.html';
   }
   console.log(array_data.toString().split('"').includes(uid));
   console.log(array_data);

@@ -342,6 +342,11 @@ function replyInput(index) {
     let item = {};
     item.content = value;
     replyArray.push(item);
+    if (window.localStorage.getItem('state').toString() === 'false') {
+      console.log('gㅎㅇㅇ');
+      alert('로그인을 하셔야합니다');
+      return;
+    }
 
     if (parsedList[index].replies !== undefined) {
       let repliesArray = parsedList[index].replies;
